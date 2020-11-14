@@ -1,0 +1,111 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scenes/ButtonCredits.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/ButtonLevelSelection.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Captura 1.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Exit.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 0.447059, 0.215686, 1 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.372549, 0.207843, 0.0901961, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.847059, 0.25098, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 1, 0.447059, 0.215686, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.372549, 0.207843, 0.0901961, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.847059, 0.25098, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.164706, 0.164706, 0.164706, 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Logo" type="Sprite" parent="."]
+position = Vector2( 521.913, 144.81 )
+scale = Vector2( 2.06624, 2.09493 )
+texture = ExtResource( 3 )
+
+[node name="ButtonCredits" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -141.0
+margin_top = -69.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "CREDITS"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonLevelSelection" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -67.0
+margin_right = 155.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "LEVEL SELECTION"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonExit" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -18.0
+margin_top = -38.0
+margin_right = 68.0
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+text = "exit"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ButtonCredits" to="ButtonCredits" method="_on_ButtonCredits_pressed"]
+[connection signal="pressed" from="ButtonLevelSelection" to="ButtonLevelSelection" method="_on_ButtonLevelSelection_pressed"]
+[connection signal="pressed" from="ButtonExit" to="ButtonExit" method="_on_ButtonExit_pressed"]
