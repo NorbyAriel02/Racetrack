@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Captura 1.png-6a77b8aaf810c7e8083cbbabe06216b2.stex"
+path="res://.import/Captura 1.png-17a9fb78493550234e430fad26205ee9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Captura 1.png"
-dest_files=[ "res://.import/Captura 1.png-6a77b8aaf810c7e8083cbbabe06216b2.stex" ]
+source_file="res://scenes/menu/Captura 1.png"
+dest_files=[ "res://.import/Captura 1.png-17a9fb78493550234e430fad26205ee9.stex" ]
 
 [params]
 
