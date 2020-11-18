@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fonts/kenvector_future.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Final_Score.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2( 1, 1.00425 )
+script = ExtResource( 2 )
+
+[node name="UI_FINAL" type="CanvasLayer" parent="."]
+
+[node name="Tiempo" type="Label" parent="UI_FINAL"]
+margin_left = 664.481
+margin_top = 407.866
+margin_right = 949.481
+margin_bottom = 546.866
+custom_fonts/font = SubResource( 1 )
+text = "Tiempo
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 440.007
+margin_top = 674.982
+margin_right = 480.007
+margin_bottom = 714.982
+rect_scale = Vector2( 8.36, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Volver" type="Label" parent="."]
+margin_left = 449.52
+margin_top = 679.718
+margin_right = 761.52
+margin_bottom = 714.718
+custom_fonts/font = SubResource( 2 )
+text = "Volver a jugar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="TextureButton" to="." method="_on_TextureButton_button_down"]
