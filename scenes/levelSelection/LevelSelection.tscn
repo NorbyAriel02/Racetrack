@@ -1,0 +1,248 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/menu/Captura 1.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/kenvector_future.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scenes/levelSelection/LevelSelection.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+font_data = ExtResource( 2 )
+
+[node name="LevelSelection" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1658.17, 915.828 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+
+[node name="LabelLvl1" type="Label" parent="."]
+anchor_bottom = 1.0
+margin_left = 300.0
+margin_top = 100.0
+margin_right = 850.0
+margin_bottom = -780.0
+custom_fonts/font = SubResource( 1 )
+text = "LEVEL 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelLvl2" type="Label" parent="."]
+anchor_bottom = 1.0
+margin_left = 300.0
+margin_top = 300.0
+margin_right = 850.0
+margin_bottom = -580.0
+custom_fonts/font = SubResource( 1 )
+text = "LEVEL 2"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelLvl3" type="Label" parent="."]
+anchor_bottom = 1.0
+margin_left = 300.0
+margin_top = 500.0
+margin_right = 850.0
+margin_bottom = -380.0
+custom_fonts/font = SubResource( 1 )
+text = "LEVEL 3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelRanked1" type="Label" parent="."]
+anchor_left = 0.091
+anchor_top = 0.148
+anchor_right = 0.361
+anchor_bottom = 0.387
+margin_left = 725.28
+margin_top = -59.84
+margin_right = 706.88
+margin_bottom = -117.96
+custom_fonts/font = SubResource( 1 )
+text = "---"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelRanked2" type="Label" parent="."]
+anchor_left = 0.091
+anchor_top = 0.148
+anchor_right = 0.361
+anchor_bottom = 0.387
+margin_left = 725.28
+margin_top = 140.16
+margin_right = 706.88
+margin_bottom = 82.04
+custom_fonts/font = SubResource( 1 )
+text = "---"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelRanked3" type="Label" parent="."]
+anchor_left = 0.091
+anchor_top = 0.148
+anchor_right = 0.361
+anchor_bottom = 0.387
+margin_left = 725.28
+margin_top = 340.16
+margin_right = 706.88
+margin_bottom = 282.04
+custom_fonts/font = SubResource( 1 )
+text = "---"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonPlay1" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -420.0
+margin_top = -980.0
+margin_right = -19.9999
+margin_bottom = -830.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelLS2" type="Label" parent="ButtonPlay1"]
+anchor_left = 0.003
+anchor_top = -0.072
+anchor_right = 1.0
+anchor_bottom = 1.095
+margin_left = -5.161
+margin_top = -10.016
+margin_right = -7.0
+margin_bottom = -10.09
+custom_fonts/font = SubResource( 2 )
+text = "Play"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonPlay2" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -420.0
+margin_top = -780.0
+margin_right = -19.9999
+margin_bottom = -630.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelLS2" type="Label" parent="ButtonPlay2"]
+anchor_left = 0.003
+anchor_top = -0.072
+anchor_right = 1.0
+anchor_bottom = 1.095
+margin_left = -5.161
+margin_top = -10.016
+margin_right = -7.0
+margin_bottom = -10.09
+custom_fonts/font = SubResource( 2 )
+text = "Play"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonPlay3" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -420.0
+margin_top = -580.0
+margin_right = -19.9999
+margin_bottom = -430.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelLS2" type="Label" parent="ButtonPlay3"]
+anchor_left = 0.003
+anchor_top = -0.072
+anchor_right = 1.0
+anchor_bottom = 1.095
+margin_left = -5.161
+margin_top = -10.016
+margin_right = -7.0
+margin_bottom = -10.09
+custom_fonts/font = SubResource( 2 )
+text = "Play"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonMenuLS" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -211.0
+margin_right = 387.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelLS2" type="Label" parent="ButtonMenuLS"]
+anchor_left = 0.149
+anchor_top = 0.276
+anchor_right = 0.72
+anchor_bottom = 0.735
+margin_left = -35.663
+margin_top = -45.236
+margin_right = 47.36
+margin_bottom = 31.915
+custom_fonts/font = SubResource( 2 )
+text = "Menu"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ButtonPlay1" to="." method="_on_ButtonPlay1_pressed"]
+[connection signal="pressed" from="ButtonPlay2" to="." method="_on_ButtonPlay2_pressed"]
+[connection signal="pressed" from="ButtonPlay3" to="." method="_on_ButtonPlay3_pressed"]
+[connection signal="pressed" from="ButtonMenuLS" to="." method="_on_ButtonMenuLS_pressed"]
