@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/platforms/floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/car/car.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/platforms/seesaw.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/bounce.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/platforms/magnet.tscn" type="PackedScene" id=5]
+
+[node name="Nivel3" type="Node2D"]
+
+[node name="seesaw2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1669.94, 532.375 )
+scale = Vector2( 3.10916, -2.00405 )
+
+[node name="car" parent="." instance=ExtResource( 2 )]
+position = Vector2( 913.805, 92.1199 )
+
+[node name="seesaw" parent="." instance=ExtResource( 3 )]
+position = Vector2( 915.304, 259.12 )
+scale = Vector2( 2.27244, -2.00405 )
+
+[node name="seesaw3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 140.266, 535.44 )
+scale = Vector2( 2.99144, -2.00405 )
+
+[node name="floor" parent="." instance=ExtResource( 1 )]
+position = Vector2( -16.6434, 945.345 )
+scale = Vector2( 3.68938, -1.50304 )
+
+[node name="floor2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 960.253, 945.345 )
+scale = Vector2( 5.70508, -1.50011 )
+
+[node name="bounce" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1037.39, 1094.62 )
+scale = Vector2( 2.99144, -2.00405 )
+
+[node name="magnet" parent="bounce" instance=ExtResource( 5 )]
+position = Vector2( -114.421, 242.686 )
