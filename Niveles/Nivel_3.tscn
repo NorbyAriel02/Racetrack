@@ -1,0 +1,103 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/platforms/bounce.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/platforms/magnet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/platforms/floor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/platforms/zerograv.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/platforms/seesaw.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/car/car.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/platforms/goal.tscn" type="PackedScene" id=7]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="magnet" parent="." instance=ExtResource( 2 )]
+position = Vector2( 802.389, 408.072 )
+
+[node name="magnet2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 666.235, 408.072 )
+
+[node name="magnet3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 532.752, 408.072 )
+
+[node name="magnet4" parent="." instance=ExtResource( 2 )]
+position = Vector2( -2635.7, 662.056 )
+
+[node name="magnet5" parent="." instance=ExtResource( 2 )]
+position = Vector2( -2772.22, 664.875 )
+
+[node name="bounce2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1069.36, 752.461 )
+
+[node name="bounce3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1205.36, 752.461 )
+
+[node name="floor2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1541.89, 634.995 )
+
+[node name="floor3" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1686.11, 934.995 )
+
+[node name="floor5" parent="." instance=ExtResource( 3 )]
+position = Vector2( -3022.7, 941.344 )
+
+[node name="floor6" parent="." instance=ExtResource( 3 )]
+position = Vector2( -3263.99, 941.344 )
+
+[node name="floor7" parent="." instance=ExtResource( 3 )]
+position = Vector2( -4128.96, 1021.43 )
+
+[node name="floor8" parent="." instance=ExtResource( 3 )]
+position = Vector2( -4377.24, 1024.1 )
+
+[node name="goal" parent="." instance=ExtResource( 7 )]
+position = Vector2( -4816.93, 1022.72 )
+
+[node name="floor9" parent="." instance=ExtResource( 3 )]
+position = Vector2( -4630.86, 1021.43 )
+
+[node name="floor10" parent="." instance=ExtResource( 3 )]
+position = Vector2( -4916.59, 929.365 )
+rotation = -1.56933
+
+[node name="floor4" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1943.5, 934.995 )
+
+[node name="floor" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1795, 632.325 )
+
+[node name="floor11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1899.77, 533.906 )
+rotation = 1.57455
+
+[node name="seesaw" parent="." instance=ExtResource( 5 )]
+position = Vector2( 207.051, 672.37 )
+
+[node name="zerograv" parent="." instance=ExtResource( 4 )]
+position = Vector2( -637.275, 796.251 )
+
+[node name="zerograv2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -838.093, 830.192 )
+
+[node name="zerograv3" parent="." instance=ExtResource( 4 )]
+position = Vector2( -995.561, 907.166 )
+
+[node name="zerograv4" parent="." instance=ExtResource( 4 )]
+position = Vector2( -2154.65, 942.811 )
+
+[node name="zerograv5" parent="." instance=ExtResource( 4 )]
+position = Vector2( -2310.22, 949.16 )
+
+[node name="zerograv6" parent="." instance=ExtResource( 4 )]
+position = Vector2( -2462.61, 961.86 )
+
+[node name="seesaw2" parent="." instance=ExtResource( 5 )]
+position = Vector2( -252.134, 696.397 )
+
+[node name="seesaw3" parent="." instance=ExtResource( 5 )]
+position = Vector2( -1306.79, 945.299 )
+
+[node name="seesaw4" parent="." instance=ExtResource( 5 )]
+position = Vector2( -3738.69, 996.096 )
+
+[node name="car" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1764.53, 499.394 )
