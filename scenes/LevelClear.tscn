@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/LevelClear.gd" type="Script" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=1]
 size = 60
 font_data = ExtResource( 1 )
 
@@ -29,7 +29,7 @@ anchor_right = 0.540479
 anchor_bottom = 0.519148
 margin_right = -26.72
 margin_bottom = -28.68
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 1 )
 text = "Tiempo final"
 __meta__ = {
 "_edit_use_anchors_": true

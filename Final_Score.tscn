@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Fonts/kenvector_future.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Final_Score.gd" type="Script" id=2]
@@ -8,6 +8,14 @@ size = 60
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
 size = 30
 font_data = ExtResource( 1 )
 
@@ -29,7 +37,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="TextureButton1" type="TextureButton" parent="."]
 margin_left = 440.007
 margin_top = 674.982
 margin_right = 480.007
@@ -49,4 +57,46 @@ text = "Volver a jugar"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="button_down" from="TextureButton" to="." method="_on_TextureButton_button_down"]
+
+[node name="LS" type="TextureButton" parent="."]
+margin_left = 1035.0
+margin_top = 677.0
+margin_right = 1472.0
+margin_bottom = 726.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelSelectio" type="Label" parent="."]
+margin_left = 1038.41
+margin_top = 682.351
+margin_right = 1472.41
+margin_bottom = 717.351
+custom_fonts/font = SubResource( 3 )
+text = "Volver a los niveles"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SN2" type="TextureButton" parent="."]
+margin_left = 737.0
+margin_top = 793.0
+margin_right = 978.0
+margin_bottom = 838.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SN" type="Label" parent="."]
+margin_left = 748.242
+margin_top = 792.892
+margin_right = 788.242
+margin_bottom = 806.892
+custom_fonts/font = SubResource( 4 )
+text = "Next Level"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="TextureButton1" to="." method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="LS" to="." method="_on_LS_button_down"]
+[connection signal="button_down" from="SN2" to="." method="_on_SN2_button_down"]

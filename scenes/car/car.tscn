@@ -10,9 +10,13 @@ radius = 12.4805
 
 [sub_resource type="PhysicsMaterial" id=2]
 
-[node name="car" type="Node2D"]
+[node name="car" type="Node2D" groups=[
+"Player",
+]]
 
-[node name="player" type="RigidBody2D" parent="."]
+[node name="player" type="RigidBody2D" parent="." groups=[
+"Player",
+]]
 collision_layer = 2
 collision_mask = 2
 mass = 0.1
@@ -49,7 +53,9 @@ node_b = NodePath("../../body")
 length = 5.0
 stiffness = 64.0
 
-[node name="body" type="RigidBody2D" parent="."]
+[node name="body" type="RigidBody2D" parent="." groups=[
+"Player",
+]]
 collision_layer = 2
 collision_mask = 2
 mass = 0.1
@@ -95,21 +101,27 @@ position = Vector2( -24.7224, -11.5196 )
 rotation = 2.0944
 polygon = PoolVector2Array( -50, -5, -50, 5, 50, 5, 50, -5 )
 
-[node name="frontWheel" parent="." instance=ExtResource( 1 )]
+[node name="frontWheel" parent="." groups=[
+"Player",
+] instance=ExtResource( 1 )]
 position = Vector2( 50, 31.3014 )
 
 [node name="frontPin" type="PinJoint2D" parent="frontWheel"]
 node_a = NodePath("..")
 node_b = NodePath("../../body")
 
-[node name="backWheel" parent="." instance=ExtResource( 1 )]
+[node name="backWheel" parent="." groups=[
+"Player",
+] instance=ExtResource( 1 )]
 position = Vector2( -50, 31.3014 )
 
 [node name="backPin" type="PinJoint2D" parent="backWheel"]
 node_a = NodePath("..")
 node_b = NodePath("../../body")
 
-[node name="topWheel" parent="." instance=ExtResource( 1 )]
+[node name="topWheel" parent="." groups=[
+"Player",
+] instance=ExtResource( 1 )]
 position = Vector2( 0, -54.6986 )
 
 [node name="topPin" type="PinJoint2D" parent="topWheel"]

@@ -20,4 +20,5 @@ func _on_Timer_timeout():
 		Score.text =("Score: " + str (numero))
 		Global.tiempo = numero
 		get_tree().change_scene("res://Final_Score.tscn")
+	
 	pass
