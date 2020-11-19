@@ -1,44 +1,34 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/platforms/magnet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/LevelClear.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/platforms/goal.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Meta.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/Points/Spawn.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Game/Game.gd" type="Script" id=5]
 [ext_resource path="res://scenes/platforms/bounce.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/platforms/floor.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/platforms/seesaw.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/platforms/zerograv.tscn" type="PackedScene" id=9]
 [ext_resource path="res://images/seamless.png" type="Texture" id=10]
-[ext_resource path="res://scenes/Muerte/Pared_Muerte.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/car/car.tscn" type="PackedScene" id=11]
+[ext_resource path="res://icon.png" type="Texture" id=12]
+[ext_resource path="res://scenes/Check.gd" type="Script" id=13]
 
-[sub_resource type="GDScript" id=1]
-script/source = "extends Node2D
+[sub_resource type="PhysicsMaterial" id=1]
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 161.234, 19.0583 )
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-"
-
-[sub_resource type="PhysicsMaterial" id=2]
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 6061.32, 554.454 )
 
 [node name="Node2D" type="Node2D"]
-script = SubResource( 1 )
+script = ExtResource( 5 )
+car = ExtResource( 11 )
 
 [node name="freeshape" type="StaticBody2D" parent="."]
 position = Vector2( 379.438, 434.182 )
-physics_material_override = SubResource( 2 )
+physics_material_override = SubResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="freeshape"]
 polygon = PoolVector2Array( -241.661, -106.497, -246.15, 108.454, 385.796, 117.434, 2302.29, 139.545, 2354.29, -878.455, 1848.29, -964.455, 1818.29, -778.455, 1944.29, -692.455, 1954.29, -496.455, 1876.29, -314.455, 1696.29, -202.455, 1374.29, -130.455, 744.294, -156.455, 430.294, -110.455, 382.99, -40.8332, 321.815, -6.59811, 260.641, 15.2899, 196.1, 21.4634, 136.609, 10.2388, 90.5881, -0.985809, 29.9752, 5.18773, -54.2095, 9.67758, -132.782, 1.25911, -201.252, -58.2314 )
@@ -48,12 +38,37 @@ texture = ExtResource( 10 )
 texture_scale = Vector2( 4, 4 )
 polygon = PoolVector2Array( -241.661, -106.497, -246.15, 108.454, 385.796, 117.434, 2302.29, 139.545, 2354.29, -878.455, 1848.29, -964.455, 1818.29, -778.455, 1944.29, -692.455, 1954.29, -496.455, 1876.29, -314.455, 1696.29, -202.455, 1374.29, -130.455, 744.294, -156.455, 430.294, -110.455, 382.99, -40.8332, 321.815, -6.59811, 260.641, 15.2899, 196.1, 21.4634, 136.609, 10.2388, 90.5881, -0.985809, 29.9752, 5.18773, -54.2095, 9.67758, -132.782, 1.25911, -201.252, -58.2314 )
 
-[node name="Pared_Muerte" parent="." instance=ExtResource( 11 )]
-position = Vector2( -820.443, 901.736 )
-scale = Vector2( 6.13626, 0.95706 )
+[node name="Position2D" type="Position2D" parent="." groups=[
+"Spawn",
+]]
+position = Vector2( 1879.45, -16.0181 )
+
+[node name="Check" type="Area2D" parent="." groups=[
+"Spawn",
+]]
+position = Vector2( -748.404, 289.338 )
+script = ExtResource( 13 )
+
+[node name="icon" type="Sprite" parent="Check"]
+modulate = Color( 0.141176, 0.776471, 0.227451, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 8.19128, 2.43216 )
+scale = Vector2( 2.09846, -3.95802 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Check"]
+scale = Vector2( 0.51234, -7.19472 )
+shape = SubResource( 2 )
+
+[node name="Pared_Muerte" type="Area2D" parent="."]
+position = Vector2( -1425.41, 1059.15 )
+scale = Vector2( 0.398318, 0.462572 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared_Muerte"]
+shape = SubResource( 3 )
 
 [node name="Area2D" parent="." instance=ExtResource( 4 )]
-position = Vector2( -3720.08, 111.61 )
+position = Vector2( -3694.68, 111.61 )
 scale = Vector2( 0.398318, 0.462572 )
 
 [node name="goal2" parent="." instance=ExtResource( 3 )]
@@ -122,8 +137,7 @@ position = Vector2( -2734.38, 143.83 )
 [node name="magnet3" parent="." instance=ExtResource( 1 )]
 position = Vector2( -2588.07, 147.193 )
 
-[node name="Spawn" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1957.09, -422.62 )
-
 [node name="Node2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 84.101, 716.607 )
+[connection signal="body_entered" from="Check" to="Check" method="_on_Check_body_entered"]
+[connection signal="body_entered" from="Pared_Muerte" to="." method="_on_Pared_Muerte_body_entered"]
