@@ -9,10 +9,22 @@ func _ready():
 func _on_ButtonMenuLS_pressed():
 	get_tree().change_scene("res://scenes/menu/Menu.tscn")
 	pass # Replace with function body.
+func WriteFile(var path):
+	var lineas = [[1, 99, 99, 1],[2, 99, 99, 0],[3, 99, 99, 0]]
+	var escribir = File.new() 
+	escribir.open(path, File.WRITE) 
+	for l in lineas:
+		escribir.store_csv_line(l, '|')
 	
+	escribir.close()
+	pass
 func leer_fichero_csv():    
 	var fichero = File.new()
-	fichero.open("res://datos.csv", File.READ)
+	var path = OS.get_user_data_dir() + "/datos.txt"
+	if !fichero.file_exists(path):
+		WriteFile(path)
+		
+	fichero.open(path, File.READ)
 	while not fichero.eof_reached():
 		var ln = fichero.get_line().split("|")
 		if(ln[0] != ""):

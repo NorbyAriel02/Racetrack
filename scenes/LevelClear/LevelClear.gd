@@ -29,9 +29,6 @@ func _on_ButtonPlay1_pressed():
 	
 	if(win == true):
 		Global.level += 1
-		print("Pasa por win")
-	else:
-		print("NO NO NO Pasa por win")
 	pass
 	
 	if (Global.level > 3):
@@ -49,11 +46,12 @@ func Ranked():
 		ranked.text = "C"
 	pass
 
-func Actualizar_csv():    
+func Actualizar_csv():   
+	var path = OS.get_user_data_dir() + "/datos.txt" 
 	var fichero = File.new()
 	var lineas = [[1, 99, 99, 1],[2, 99, 99, 0],[3, 99, 99, 0]]
 	var a = 0
-	fichero.open("res://datos.csv", File.READ)
+	fichero.open(path, File.READ)
 	while not fichero.eof_reached():
 		if(a == 3):
 			break
@@ -78,7 +76,7 @@ func Actualizar_csv():
 	fichero.close()
 	
 	var escribir = File.new() 
-	escribir.open("res://datos.csv", File.WRITE) 
+	escribir.open(path, File.WRITE) 
 	for l in lineas:
 		escribir.store_csv_line(l, '|')
 	
